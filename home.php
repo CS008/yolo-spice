@@ -1,4 +1,4 @@
-<? include ("header.php") ?>
+<? include ("site-structure/header.php") ?>
 
 <article class="main">
 
@@ -7,4 +7,4 @@
 </article>
 
 
-<? include("footer.php") ?>
+<? include("site-structure/footer.php") ?>
