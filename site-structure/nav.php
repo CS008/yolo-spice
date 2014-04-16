@@ -35,6 +35,13 @@
         else {
             print '<li><a href="contact-us.php">Contact Us!</a></li>';
         }
+        
+        if ($path_parts['filename'] == "comments") {
+            print '<li class="activePage">LEAVE A CMOMONATN</li>';
+        }
+        else {
+            print '<li><a href="contact-us.php">Comments</a></li>';
+        }
 
         ?>
     </ol>
