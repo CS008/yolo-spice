@@ -1,7 +1,8 @@
 <? include ("top.php"); ?>
 
 <header>
-    <h1>Insert a site name here!</h1>
+    <h1>CS eats 4 lyfe</h1>
+   
 </header>
 
 
