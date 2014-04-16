@@ -40,7 +40,7 @@
             print '<li class="activePage">LEAVE A CMOMONATN</li>';
         }
         else {
-            print '<li><a href="contact-us.php">Comments</a></li>';
+            print '<li><a href="comments.php">Comments</a></li>';
         }
 
         ?>
