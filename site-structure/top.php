@@ -12,13 +12,13 @@
 
 
     $pageName = $path_parts['filename'];
-    print "<title>" . ucwords($pageName) . " - Assignment3.1 CS008</title>";
+    print "<title>" . ucwords($pageName) . " - UDS Reviews</title>";
 
 ?>
 
 <meta charset="utf-8">
-<meta name="author" content="Michael Fritz">
-<meta name="description" content="A site dedicated to MSC">
+<meta name="author" content="Yolo-Spice">
+<meta name="description" content="A site to review dining locations on UVM campus">
 
 <!-- see: http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag/ -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,8 @@
 	
 <link rel="stylesheet" href="style.css" type="text/css" media="screen">
 
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 <?php
 // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^% 
