@@ -1,7 +1,7 @@
 <? include ("top.php"); ?>
 
 <header>
-    <h1>CS eats 4 lyfe</h1>
+    <h1>CS 3ats 4 Lyfe</h1>
    
 </header>
 
