@@ -1,9 +1,12 @@
-<body id=bill>
+<? include ("site-structure/header.php") ?>
+
+<body id='bill'>
+
 	<h1>Bill reviews Northside Cafe</h1>
 	<h4>located on Trinity campus</h4>
-	<article class=review>
+	<article class='review'>
 		<h2>Northside Special</h2>
-		<h3>General tao\'s chicken with jasmine rice and green beans</h3>
+		<h3>General tao's chicken with jasmine rice and green beans</h3>
 		<p>
 			First off the green beans. They weren't too crunchy and they fell more towards the mushy side. Most likely to 
 			have been because it sat around for a while.		
@@ -24,9 +27,9 @@
 		</p>
 		
 	</article>
-	<article class = review>
+	<article class = 'review'>
 		<h2>Northside Pizza</h2>
-		<h3>Meatlover's special<h3>
+		<h3>Meatlover's Special<h3>
 		<p>
 			This pizza should have been confiscated by BP because this pizza had an excruciating amount of oil on it.
 		</p>
@@ -45,14 +48,14 @@
 	
 	</article>
 	
-	<article class = review>
+	<article class = 'review'>
 		<h2>Northside Dessert</h2>
 		<h3>Turtle Brownie from Redstone bakery</h3>
 		<p>
 			This thing is really god damn chewy. It doesn't even deserve to be called a brownie. More like chocolate flavoured chewing gum.
 		</p>
 		<p>
-			Still its a brownie, 3.0 Rainbows
+			Still it's a brownie, 3.0 Rainbows
 		</p>
 		
 		
@@ -60,6 +63,4 @@
 	
 	</article>
 	
-
-
-</body>
+<? include("site-structure/footer.php") ?>
