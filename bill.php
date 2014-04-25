@@ -3,7 +3,7 @@
 	<h4>located on Trinity campus</h4>
 	<article class=review>
 		<h2>Northside Special</h2>
-		<h3>General tao's chicken with jasmine rice and green beans</h3>
+		<h3>General tao\'s chicken with jasmine rice and green beans</h3>
 		<p>
 			First off the green beans. They weren't too crunchy and they fell more towards the mushy side. Most likely to 
 			have been because it sat around for a while.		
