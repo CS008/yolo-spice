@@ -29,7 +29,7 @@
 	</article>
 	<article class = 'review'>
 		<h2>Northside Pizza</h2>
-		<h3>Meatlover's Special<h3>
+		<h3>Meatlover's Special</h3>
 		<p>
 			This pizza should have been confiscated by BP because this pizza had an excruciating amount of oil on it.
 		</p>
