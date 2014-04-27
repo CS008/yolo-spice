@@ -17,7 +17,7 @@ Step 4) Okay, now you need to map a network drive. Bill, you probably can do thi
 Step 5) Now that you have the files and can easily access them via your personal file editors, we can get into the fun commands!
 
 GITHUB COMMANDS NECESSARY TO LEARN
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========
 
 If you want, you can write these down for quick reference, but they'll be here too. 
 
