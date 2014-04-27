@@ -13,7 +13,7 @@ Okay, so to be clear as to how to use GitHub for this assignment, I'll leave a l
 Step 1) Use Putty (or Terminal for MACs) to ssh to your public_html folder. (not difficult becuase you're already there once you log in)
 Step 2) After you're in your assignment4.1 folder, use the command "git clone https://github.com/CS008/yolo-spice" to clone the repository into your assignment4.1 folder
 Step 3) Now that you have the files in your UVM folders, go ahead and leave terminal/putty up so we can use it later.
-Step 4) Okay, now you need to map a network drive. Bill, you probably can do this no problem. Adiran, I can help you. We can sit down quickly to get this done. SAVE this connection for the future.
+Step 4) Okay, now you need to map a network drive. Rocky Balboa, I can help you. We can sit down quickly to get this done. SAVE this connection for the future.
 Step 5) Now that you have the files and can easily access them via your personal file editors, we can get into the fun commands!
 
 GITHUB COMMANDS NECESSARY TO LEARN
