@@ -45,5 +45,7 @@ Command 5: git push/ git pull
 		- each will require you to enter your username and password
 			~ if either of you want, I can set up git to store your password for your session so you don't have to repeatably enter your username and password
 
+Command 6: git remote set-url origin https://yourUsername@github.com/CS008/yolo-spice.git
+		-sets the URL to deal with the 403 error
 
 So, that's what you need to know. Cheers!    
