@@ -1,8 +1,13 @@
 <? include ("site-structure/header.php") ?>
 
 	<h1>Bill reviews Northside Cafe</h1>
+
 	<h4>located on Trinity campus</h4>
+
+
 	<article class='review'>
+
+	
 		<h2>Northside Special</h2>
 		<h3>General tao's chicken with jasmine rice and green beans</h3>
 		<p>
