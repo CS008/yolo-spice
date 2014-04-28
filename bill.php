@@ -1,7 +1,5 @@
 <? include ("site-structure/header.php") ?>
 
-<body id='bill'>
-
 	<h1>Bill reviews Northside Cafe</h1>
 	<h4>located on Trinity campus</h4>
 	<article class='review'>
