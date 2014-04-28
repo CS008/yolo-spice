@@ -52,7 +52,7 @@ if($file){
 }
 
 
-print '<article id="comments">';
+print '<article id="remarks">';
 foreach($records as $oneRecord){
     if($oneRecord[0]!=""){  //the eof would be a "" 
         print '<p>';
@@ -360,12 +360,12 @@ print '</div>';
 
 </fieldset>
 </fieldset>
+</fieldset>
 </form>
 
 
-
+</article>
 
 <?php }
 include("site-structure/footer.php");  
 ?>
-</article>
