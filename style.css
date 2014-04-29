@@ -2,8 +2,22 @@
 	background-color:#80e680;
 	text-align: left;
 }
+#errors{
+color:red;
+text-align: center;
+}
 
+#remarks{
+border-style: solid double;
+margin-right: 25%;
+margin-left: 10%;
 
+}
+#frmRegister{
+margin-left: 33%;
+margin-right: 33%;
+
+}
 
 /* Hashtag yoloswag*/
 
