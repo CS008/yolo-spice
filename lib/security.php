@@ -1,7 +1,7 @@
 <?php
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //performs a few security checks
-function securityCheck($form = "") {
+function securityCheck() {
     
     // globals defined in top.php
     global $yourURL;
