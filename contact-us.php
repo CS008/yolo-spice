@@ -457,4 +457,4 @@ print '</div>';
 
 <br>
 
-<?} include("footer.php"); ?>
+<?} include("site-structure/footer.php"); ?>
