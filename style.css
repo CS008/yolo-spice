@@ -1,6 +1,10 @@
 *{
-	background-color:#80e680;
-	text-align: left;
+	font-size: 12pt;
+	font-style: "Times New Roman";
+}
+
+body{
+	background: #E09D31;
 }
 #errors{
 color:red;
