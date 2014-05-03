@@ -5,7 +5,66 @@
 
 body{
 	background: #E09D31;
+	margin-left: 25%;
+	margin-right: 25%;
 }
+
+/**                                                                                             **/
+/**                                 Naviagtion Section                                          **/
+/**                                                                                             **/
+
+
+nav{
+    margin:auto;
+}
+nav ol {
+    text-align: center;
+}
+
+nav ol li{
+    display: inline;
+    list-style-type: none;
+    margin-right: 12%;
+}
+
+nav ol li a{
+    border-style: outset;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    background-color: aliceblue;
+    font-weight: bold;
+    border-color: brown;
+}
+
+.activePage{
+    display: inline;
+    list-style-type: none;
+    padding-right: 12%;
+    border-style: inset;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    background-color: darkgrey;
+    font-weight: bold;
+}
+
+nav ol li a:link { /* unvisited link */
+    color:black;
+}      
+nav ol li a:visited {  /* visited link */
+    border-color:darkgreen;
+    border-style: inset;
+    color: black;
+} 
+nav ol li a:hover { /* mouse over link */
+    color:black;
+    background-color: darkgrey;
+    border-style: inset;
+}  
+
+/** END OF NAV **/
+
 #errors{
 color:red;
 text-align: center;

@@ -1,6 +1,6 @@
 <? include ("site-structure/header.php") ?>
 
-	<h1> Michael Reviews ????? </h1>
+	<h1> Michael Reviews Cook Commons Dining </h1>
 
 	<article class="review">
 
