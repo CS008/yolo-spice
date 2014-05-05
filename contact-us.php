@@ -130,7 +130,7 @@ if(!$errorMsg){
     // Begin processing data
  $fileExt=".csv";
  
-         $myFileName="registration";
+         $myFileName="formData";
  
          $filename = $myFileName . $fileExt;
  
