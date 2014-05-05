@@ -60,7 +60,7 @@ if (isset($_POST["btnSubmit"])){
     }
 
 
-   include ("validation_function.php"); // you need to create this file (see link in lecture notes)
+   include ("lib/validationFunctions.php"); // you need to create this file (see link in lecture notes)
     $errorMsg=array();
 
 //************************************************************
