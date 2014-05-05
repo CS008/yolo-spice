@@ -1,14 +1,18 @@
 <?
+include ("site-structure/header.php"); 
+  
+ ?>
 
-include ("site-structure/header.php");
-
-//%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
-// 
-// Initialize variables
-//  
-//  Here we set the default values that we want our form to display
-
-$debug = false;
+<article id="cool">
+ 
+    <img src="pics2/leather.jpg" alt="swag" height="200" width="200">
+         
+ <form action="<? print $phpSelf; ?>" 
+       method="post"
+       id="frmOrder">
+ 
+     
+<?php  $debug = false;
 
 if(isset($_GET["debug"])){ // this just helps me out if you have it
     $debug = true;
@@ -20,32 +24,27 @@ if ($debug) print "<p>DEBUG MODE IS ON</p>";
 //  CHANGES NEEDED: create variable for each form element
 //                  to set your default values. in the example i set them to me
 
-
-//UNIVERSITY
-    $ClarksonFlag = true;
-    $SUNYPotsdamFlag = false;
-    $SLUFlag = false;
-    $otherFlag = false;
-
-    //GENDER
-    $genderMale = true;
-    $genderFemale = false;
+$firstName="";
+$lastName="";
+$email="";
+$pizza = true;
+$pasta = false;
+$special = false;
+$dessert = false;
+$other = false;
+$gender = "Male";
+$food="Cook";
 
 // this would be the full url of your form
 // See top.php for variable declartions
 $yourURL =  $domain . $phpSelf;
 
+
+
 //initialize flags for errors, one for each item
 $firstNameERROR = false;
 $lastNameERROR = false;
 $emailERROR = false;
-$univerityERROR = false;
-
-//%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
-// 
-// This if statement is how we can check to see if the form has been submitted
-// 
-// NO CHANGES: but VERFIY your forms submit button is named btnSubmit
 
 if (isset($_POST["btnSubmit"])){
 
@@ -55,263 +54,131 @@ if (isset($_POST["btnSubmit"])){
     //
     // Security check block one, no changes needed
     if(!securityCheck()){
-        $msg= "<h1 class=\"securityBreach\">Sorry you cannot access this page. ";
-        $msg.= "Security breach detected and reported</h1>";
-        echo '<br>';
-        echo $msg;
-        echo '<br>';
-        include("footer.php");
-        die();
+        $msg= "<p>Sorry you cannot access this page. ";
+        $msg.= "Security breach detected and reported</p>";
+        die($msg);
     }
-    
-    //check for errors
-    include ("lib/validationFunctions.php"); // you need to create this file (see link in lecture notes)
-    $errorMsg=array();
-    $dataRecord = array();
-     
-    //************************************************************
-    // we need to make sure there is no malicious code so we do 
-    // this for each element we pass in. Be sure your names match
-    // your objects
-    // 
-    // Security check block two
-    // 
-    // What this does is take things like <script> and replace it
-    // with &lt;script&gt; so that hackers cannot send malicous 
-    // code to you.
-    //   
-    // You will notice i have set radio buttons, list box and the 
-    // check boxes just in case someone tries something funky.
-    // 
-    // CHANGES NEEDED: match PHP variables with form elements
-    // 
-    // */
 
-    $checked = "checked='checked'";
-    
+
+   include ("validation_function.php"); // you need to create this file (see link in lecture notes)
+    $errorMsg=array();
+
+//************************************************************
+$dataRecord=array();  
+     
     $firstName = htmlentities($_POST["txtFirstName"],ENT_QUOTES,"UTF-8");
     $lastName = htmlentities($_POST["txtLastName"],ENT_QUOTES,"UTF-8");
     $email = htmlentities($_POST["txtEmail"],ENT_QUOTES,"UTF-8");
-
-    //GENDER
     
-    if($gender = htmlentities($_POST["radGender"],ENT_QUOTES,"UTF-8") == "Male"){
-      $genderMale = true;
-    }elseif($gender = htmlentities($_POST["radGender"],ENT_QUOTES,"UTF-8") == "Female"){
-      $genderFemale = true;
-      $genderMale = false;
-    }
-
-    //UNIVERSIY
-
-    if(isset($_POST["chkClarkson"])) {
-      $ClarksonFlag = true;
+        if(isset($_POST["chkPizza"])) {
+        $pizza  = true;
     }else{
-      $ClarksonFlag = false;
+        $pizza  = false;
     }
-
-    if(isset($_POST["chkSUNYPotsdam"])) {
-       $SUNYPotsdamFlag = true;
+    
+    if(isset($_POST["chkPasta"])) {
+        $pasta  = true;
     }else{
-      $SUNYPotsdamFlag = false;
+        $pasta  = false;
     }
-
-    if(isset($_POST["chkSLU"])) {
-         $SLUFlag = true;
+       
+    if(isset($_POST["chkSpecial"])) {
+        $special  = true;
     }else{
-      $SLUFlag = false;
+        $special = false;
     }
-
+   
+     if(isset($_POST["chkDessert"])) {
+        $dessert  = true;
+    }else{
+        $dessert = false;
+    } 
+    
     if(isset($_POST["chkOther"])) {
-      $otherFlag = true;
+        $other  = true;
     }else{
-      $otherFlag = false;
-    }
-
-    //RESTURAUNT
-
-    $HotTomlesSelected = false;
-    $SergiesSelected = false;
-    $MamaLuciasSelected = false;
-
-    $Resturaunt = htmlentities($_POST["lstResturaunt"]);
-    if($Resturaunt == "Hot Tomales"){
-      $HotTomlesSelected = true;
-    }elseif($Resturaunt == "Sergies"){
-      $SergiesSelected = true;
-    }elseif ($Resturaunt == "Mama Lucias"){
-      $MamaLuciasSelected = true;
-    }else{ //Just so that one is selected Automatically
-      $HotTomlesSelected = true;
+        $other = false;
     }
     
+    $gender = htmlentities($_POST["radGender"],ENT_QUOTES,"UTF-8");
     
-    
-    
-    // Test first name for empty and valid characters
-    // YOU NEED TO DO THIS
-
-    if($firstName==""){
-      $errorMsg[]="Please enter your first name.";
-      $firstNameERROR = true;
-    }elseif(!verifyName($firstName)){
-      $errorMsg[]="Your first name appears to be invalid.";
-      $firstNameERROR = true;
-    }
-
-    $dataRecord[]=$firstName;
-    
-    
-    
-    // Test last name for empty and valid characters
-    // YOU NEED TO DO THIS
-   if($lastName==""){
-      $errorMsg[]="Please enter your last name.";
-      $lastNameERROR=true;
-   }elseif(!verifyName($lastName)){
-      $errorMsg[]="Your last name appears to be invalid.";
-      $lastNameERROR=true;
-   }
-
-   $dataRecord[] = $lastName;
-    
-   // TODO: get form set up to validate email address instead of first name
-    
-    // test email for empty and valid format
-    
-    // NOTE: i removed required attribute and set this input type=text instead 
-    // of type=email so i can check my php code.
-
-     // Test anything else
-    // YOU NEED TO DO THIS
-
-     if($email==""){
-        $errorMsg[]="Please enter your email address";
-        $emailERROR = true;
-     }elseif(!verifyEmail($email)){ 
-        $errorMsg[]="Your email address appears to be incorrect.";
-        $emailERROR = true;
-     }
-
-     //UNIVERSITY
-
-     if(!($ClarksonFlag)){if(!($SUNYPotsdamFlag)){if(!($SLUFlag)){if(!($otherFlag)){ $univerityERROR = true; $errorMsg[] = "You must choose a school.";}}}}
-
-     $ClarksonFlag_res = ($ClarksonFlag) ? 'true' : 'false';
-     $SUNYPotsdamFlag_res = ($SUNYPotsdamFlag) ? 'true' : 'false';
-     $SLUFlag_res = ($SLUFlag) ? 'true' : 'false';
-     $otherFlag_res = ($otherFlag) ? 'true' : 'false';
-
-     $dataRecord[] =  $ClarksonFlag_res;
-     $dataRecord[] =  $SUNYPotsdamFlag_res;
-     $dataRecord[] =  $SLUFlag_res;
-     $dataRecord[] =  $otherFlag_res;
-
-     //Add the gender
-     if($genderMale){ $gender_res = "Male";}elseif($genderFemale){ $gender_res = "Female"; }
-     $dataRecord[] =  $gender_res;
-
-     //Add resturaunt
-     $dataRecord[] = $Resturaunt;
-
+    $food = htmlentities($_POST["lstSize"],ENT_QUOTES,"UTF-8");
      
-    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    // 
-    // our form data is valid at this point so we can process the data
-    if(!$errorMsg){ 
-        if ($debug) print "<p>Form is valid</p>";
+  //NOTE: i removed required attribute and set this input type=text instead 
+  // of type=email so i can check my php code.
+    
+    
+    if($email==""){
+     $errorMsg[]="Please enter your email address";
+     $emailERROR = true;
+}elseif(!verifyEmail($email)){ 
+     $errorMsg[]="Your email address appears to be incorrect.";
+     $emailERROR = true;
+}
+    
 
-        //####################################################################
-        // Begin processing data
+    $dataRecord[]=$email;
 
 
 
-        //************************************************************
-        //
-        //  In this block I am just putting all the forms information
-        //  into a variable so I can print it out on the screen
-        //
-        //  the substr function removes the 3 letter prefix
-        //  preg_split('/(?=[A-Z])/',$str) add a space for the camel case
-        //  see: http://stackoverflow.com/questions/4519739/split-camelcase-word-into-words-with-php-preg-match-regular-expression
-        //
-        //  CHANGES: first message line. foreach no changes needed
 
-        $message  = '<div class = "thing"> <h1>Thank you for filling out our form!</h1>';
-        $message .= '<h3>Your information has been recorded and sent in an email to you.</h3>';
+// our form data is valid at this point so we can process the data
+if(!$errorMsg){	
+    if ($debug) print "<p>Form is valid</p>";
 
-        foreach ($_POST as $key => $value){
-            if($key != "btnSubmit"){
-              if($key == "chkOther"){ $key = "chkSchool ";} 
-              elseif($key == "chkClarkson"){ $key = "chkSchool ";}
-              elseif($key == "chkSLU"){ $key = "chkSchool ";}
-              elseif($key == "chkSUNYPotsdam "){ $key = "chkSchool ";}
-              $message .= "<p>"; 
-
-              $camelCase = preg_split('/(?=[A-Z])/',substr($key,3));
-
-              foreach ($camelCase as $one){
-                  $message .= $one . " ";
-              }
-              $message .= ": " . htmlentities($value,ENT_QUOTES,"UTF-8") . "</p>";
-            }
-        }
-
-        $message .= "</div>";
-
-        include_once('lib/mailMessage.php');
-        $mailed = sendMail($email, $message);
-
-        //########################################################
-        // Begin processing data
-
-        //########################################################
-        // Save Forms data to a csv file on the cloud
-
-        // NOTE: When you save the forms information to a file, the file
-        // permissions can cause problems
-
-        //NOTE: my file is in a folder called data
-
-        // Step one in netbeans create new file, name it formData.csv
-        // Step two delete the contents of this csv file and save it
-        // Step three use fugu or winscp to set the permissions on this
-        // file to 666 (rw- for everyone)
-        // Now try your form and see if it saves.
-
-        //Saves the date to the CSV
-        $date = Date("F d Y H:i:s");
-        $dataRecord[] = $date;
-
-        $fileExt=".csv";
-
-        $myFileName="data/formData";
-
-        $filename = $myFileName . $fileExt;
-
-        if ($debug) print "\n\n<p>filename is " . $filename;
-
-        // now we just open the file for append
-        $file = fopen($filename, 'a');
-
-        // write the forms informations
-        fputcsv($file, $dataRecord);
-
-        // close the file
+    //####################################################################
+    // Begin processing data
+ $fileExt=".csv";
+ 
+         $myFileName="registration";
+ 
+         $filename = $myFileName . $fileExt;
+ 
+         if ($debug) print "\n\n<p>filename is " . $filename;
+ 
+         // now we just open the file for append
+         $file = fopen($filename, 'a');    
+ 
+         // write the forms informations
+         fputcsv($file, $dataRecord);
+ 
+         // close the file
         fclose($file);
 
-        //####################################################################
+
+    //************************************************************
+    //
+    //  In this block I am just putting all the forms information
+    //  into a variable so I can print it out on the screen
+    //
+    //  the substr function removes the 3 letter prefix
+    //  preg_split('/(?=[A-Z])/',$str) add a space for the camel case
+    //  see: http://stackoverflow.com/questions/4519739/split-camelcase-word-into-words-with-php-preg-match-regular-expression
+    //
+    //  CHANGES: first message line. foreach no changes needed
+
+    $message  = '<h2>Hey there.</h2>';
+
+    foreach ($_POST as $key => $value){
+
+        $message .= "<p>"; 
+
+        $camelCase = preg_split('/(?=[A-Z])/',substr($key,3));
+
+        foreach ($camelCase as $one){
+            $message .= $one . " ";
+        }
+        $message .= " = " . htmlentities($value,ENT_QUOTES,"UTF-8") . "</p>";
+    }
+
+ 
 
 
-    } // ends form is valid
-    
-} // ends if form was submitted. We will be adding more information ABOVE this
+include_once('mailmessage.php');
+        $mailed = sendMail($email, $message);
+} // ends form is valid
+} // ends form is submitted
 
-?>
-
-<article id="main">
-
-<? 
 //*****************************************************************************
 //
 //  In this block  display the information that was submitted and do not 
@@ -319,142 +186,173 @@ if (isset($_POST["btnSubmit"])){
 //  
 //  NO CHANGES NEEDED
 //
+
 if (isset($_POST["btnSubmit"]) AND empty($errorMsg)){  // closing of if marked with: end body submit
-    echo $message;
-    include("footer.php");
-    die();
-} else {
+   
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    print "<h1>Your Request has ";
 
-
-?>
-
-<h1> Questionaire </h1>
-
-<p> Greetings! Thank you for visiting Potsdam. If you would be so kind as to fill out this following form, the municipal government of Potsdam would really appreciate it. (Note, this site is not under the supervision of the Government of Potsdam. It is merely a class assignment. To find the actual Potsdam Home Page, click on the logo at the top.) </p>
-
-<p> The aim of this survey is to guage what parts of Potsdam tourists and residents find most charming. From the movie theatre to local eating establishments, Potsdam is always a fun place. </p>
-<p>Instructions to fill out the form:</p>
-
-<p class="instructions">Thank you for taking a few moments to fill out this form! Please start by filling out your first name, last name, and email. Then, check the respective boxes you'd wish in regards to University. Then, select your gender and then tell us your favroite resturaunt!</p>
-
-<p>Have a wonderful day, everyone!</p>
-<? 
-
-// display the form, notice the closing } bracket at the end just before the 
-// closing body tag
-
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-//
-// Here we display any errors that were on the form
-//
+    if (!$mailed) {
+        echo "not ";
+    }
     
+    echo "been processed</h1>";
+
+    print "<p>A copy of this message has ";
+    if (!$mailed) {
+        echo "not ";
+    }
+    print "been sent</p>";
+    print "<p>To: " . $email . "</p>";
+    print "<p>Mail Message:</p>";
+    echo $message; 
+ 
+   } else {
+
+ //*****************************************************************************
+     
+//***************************************************************************** 
+     
+      
 print '<div id="errors">';
 
 if($errorMsg){
-    echo "<ul>\n";
+    echo "<ol>\n";
     foreach($errorMsg as $err){
         echo "<li>" . $err . "</li>\n";
     }
-    echo "</ul>\n";
+    echo "</ol>\n";
 } 
 
 print '</div>';
 
 
+
+// display the form, notice the closing } bracket at the end just before the 
+// closing body tag
+
+?>
+     
+     
+     
+ <fieldset class="wrapper">
+   <legend>Order Today</legend>
+   <p>Please fill out the following registration form. <span class='required'></span>.</p>
+ 
+ <fieldset class="intro">
+ <legend>Please complete the following form</legend>
+ 
+ <fieldset class="contact">
+     <legend>Contact Information</legend>
+    
+ 	<label for="txtFirstName" class="required">First Name
+   	<input type="text" id="txtFirstName" name="txtFirstName" 
+               value="<?php echo $firstName; ?>"
+                tabindex="100" maxlength="25" placeholder="enter your first name" 
+                autofocus onfocus="this.select()" required>
+ 	</label>
+         <!-- note for last name i did not use the required attribute, this is 
+              only for demonstration purposes. -->
+         
+        <label for="txtLastName" class="required">Last Name
+   	<input type="text" id="txtLastName" name="txtLastName" 
+                value="<?php echo $lastName; ?>"
+                tabindex="110" maxlength="25" placeholder="enter your last name" 
+                autofocus onfocus="this.select()" required>
+        </label>
+         
+ 	<label for="txtEmail" class="required">Email
+   	<input type="text" id="txtEmail" name="txtEmail" 
+                value="<?php echo $email; ?>"
+                tabindex="120" maxlength="45" placeholder="enter a valid email address" 
+                <?php if($emailERROR) echo 'class="mistake"'; ?>
+                onfocus="this.select()" required >
+        </label>
+ </fieldset>					
+ 
+  <fieldset class="radio">
+ 	<legend>What is your gender?</legend>
+ 	<label><input type="radio" id="radGenderMale" name="radGender"
+                       <?php if($gender=="Male") echo ' checked="checked" ';?>
+                       value="Male" tabindex="300">Male</label>
+             
+ 	<label><input type="radio" id="radGenderFemale" name="radGender"
+                      <?php if($gender=="Female") echo ' checked="checked" ';?>
+                       value="Female" tabindex="310">Female</label>
+ </fieldset>
+ 
+ 
+ <fieldset class="checkbox">
+ 	<legend>What is your favorite food?</legend>
+   	
+         <label><input type="checkbox" id="chkPizza" name="chkPizza"
+                        <?php if($pizza) echo ' checked="checked" ';?>
+                       value="Pizza" tabindex="200"> Pizza</label>
+             
+ 	<label><input type="checkbox" id="chkPasta" name="chkPasta" 
+                       <?php if($pasta) echo ' checked="checked" ';?>
+                       value="Pasta" tabindex="210"> Pasta</label>
+        
+        <label><input type="checkbox" id="chkSpecial" name="chkSpecial" 
+                       <?php if($special) echo ' checked="checked" ';?>
+                       value="Special" tabindex="220"> Special</label>
+        
+        <label><input type="checkbox" id="chkDessert" name="chkDessert" 
+                       <?php if($dessert) echo ' checked="checked" ';?>
+                       value="Dessert" tabindex="220"> Dessert</label>
+         
+        <label><input type="checkbox" id="chkOther" name="chkOther" 
+                       <?php if($dessert) echo ' checked="checked" ';?>
+                      value="Other" tabindex="220"> Other</label>
+        
+ </fieldset>
+ 
+ 
+ <fieldset class="lists">	
+	<legend>Your Favorite Dining Halls</legend>
+ 	<select id="lstFood" name="lstFood" tabindex="400" size="1">
+ 		
+                <option <?php if($food=="Cook") echo ' selected="selected" ';?>
+                    value="Cook">Cook</option>
+                
+                <option <?php if($food=="The Grundle") echo ' selected="selected" ';?>
+                    value="The Grundle">The Grundle</option>            
+                
+                <option <?php if($food=="Northside") echo ' selected="selected" ';?>
+                    value="Northside">Northide</option>
+ 		
+                <option <?php if($food=="Other") echo ' selected="selected" ';?>
+                    value="Other">Other</option>
+ 	
+                
+ 	</select>
+ </fieldset>
+ 
+ <fieldset class="buttons">
+ 	<legend></legend>				
+ 	<input type="submit" id="btnSubmit" name="btnSubmit" value="Register" tabindex="900" class="button">
+        <input type="reset" id="btnReset" name="btnReset" value="Reset Form" tabindex="910" class="button">
+ </fieldset>					
+ 
+ </fieldset>
+ </fieldset>
+ </form>
+   
+    
+   </article>
+
+ 
+     
+     <?php
+} // end body submit NO CHANGE NEEDED
+
+if ($debug) print "<p>END OF PROCESSING</p>";
+
+ include ("site-structure/footer.php"); 
+
 ?>
 
-<form action= <? print '"' . $phpSelf . '"'; ?> 
-      method="post"
-      id="frmRegister">
-			
-<fieldset class="wrapper">
+ </body>
+ </html>
+ fi
 
-<fieldset class="intro">
-<legend>Please complete the following form</legend>
-
-<fieldset class="contact">
-    <legend>Contact Information</legend>
-    
-	<label for="txtFirstName" class="required">First Name
-  	<input type="text" id="txtFirstName" name="txtFirstName" 
-               value= <? print '"' . $firstName . '"'; ?>
-               tabindex="100" maxlength="25" placeholder="enter your first name" 
-               autofocus onfocus="this.select()" <? if($firstNameERROR) print 'class="mistake"' ?> >
-	</label>
-        <!-- note for last name i did not use the required attribute, this is 
-             only for demonstration purposes. -->
-        <label for="txtLastName" class="required">Last Name
-  	<input type="text" id="txtLastName" name="txtLastName" 
-               value=<? print '"' . $lastName . '"'; ?>
-               tabindex="110" maxlength="25" placeholder="enter your last name" 
-               autofocus onfocus="this.select()" <? if($lastNameERROR) print 'class="mistake"' ?> >
-        </label>
-	<label for="txtEmail" class="required">Email
-  	<input type="text" id="txtEmail" name="txtEmail" 
-               value=<? print '"' . $email . '"'; ?>
-               tabindex="120" maxlength="45" placeholder="Enter a valid email address" 
-               onfocus="this.select()" <? if($emailERROR) print 'class="mistake"' ?> >
-        </label>
-</fieldset>					
-
-<fieldset class="checkbox">
-	<legend>What local Universities have you applied to?</legend>
-  	
-  <label><input type="checkbox" id="chkClarkson" name="chkClarkson" value="Clarkson" tabindex="200" <? if($ClarksonFlag){ echo "checked=\"checked\""; }?>>Clarkson</label>
-            
-	<label><input type="checkbox" id="chkSUNYPotsdam" name="chkSUNYPotsdam" value="SUNY Potsdam" tabindex="210" <?if($SUNYPotsdamFlag){ echo "checked=\"checked\"";} ?> >SUNY Potsdam</label>
-
-  <label><input type="checkbox" id="chkSLU" name="chkSLU" value="SLU" tabindex="220" <?if($SLUFlag){ echo "checked=\"checked\"";} ?> >SLU</label>
-
-  <label><input type="checkbox" id="chkOther" name="chkOther" value="Other" tabindex="230" <?if($otherFlag){ echo "checked=\"checked\"";} ?> >Other</label>
-
-
-</fieldset>
-
-<fieldset class="radio">
-	<legend>What is your gender?</legend>
-
-	<label><input type="radio" id="radGenderMale" name="radGender" value="Male" <? if($genderMale){ echo "checked=\"checked\"";} ?> tabindex="300">Male</label>
-
-  <label><input type="radio" id="radGenderFemale" name="radGender" value="Female" <? if($genderFemale) echo "checked=\"checked\"" ?> tabindex="310">Female</label>
-
-</fieldset>
-
-
-
-<fieldset class="lists">
-
-	<legend>Favourite Potsdam Resturaunt</legend>
-
-	<select id="lstResturaunt" name="lstResturaunt" tabindex="400" size="1">
-
-		<option value="Hot Tomales" <?if($HotTomlesSelected){ echo "selected=\"selected\"";} ?> >Hot Tomales</option>
-
-		<option value="Sergies" <?if($SergiesSelected){ echo "selected=\"selected\"";} ?> >Sergies</option>
-
-		<option value="Mama Lucias" <?if($MamaLuciasSelected){ echo "selected=\"selected\"";} ?> >Mama Lucias</option>
-
-	</select>
-
-</fieldset>
-
-<fieldset class="buttons">
-
-	<legend></legend>	
-
-	<input type="submit" id="btnSubmit" name="btnSubmit" value="Register" tabindex="900" class="button">
-
-	<input type="reset" id="btnReset" name="btnReset" value="Reset Form" tabindex="910" class="button">
-
-</fieldset>					
-
-
-</fieldset>
-</fieldset>
-</form>
-
-</article>
-
-<br>
-
-<?} include("site-structure/footer.php"); ?>
