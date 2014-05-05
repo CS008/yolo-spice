@@ -1,6 +1,6 @@
 *{
 	font-size: 12pt;
-	font-style: "Times New Roman";
+	font-family: "Times New Roman";
 }
 
 body{
@@ -65,6 +65,7 @@ nav ol li a:hover { /* mouse over link */
 
 /** END OF NAV **/
 
+
 #errors{
 color:red;
 text-align: center;
@@ -76,10 +77,27 @@ margin-right: 25%;
 margin-left: 10%;
 
 }
+/*
 #frmRegister{
 margin-left: 33%;
 margin-right: 33%;
 
+}
+*/
+.review{
+border-style: solid dashed solid dashed;
+background-color: #5ca028;
+padding-left: 3em;
+padding-right: 3em;
+
+}
+.wrapper{
+background-color:#5ca028;
+
+}
+.pic{
+height:40%;
+width:50%;
 }
 
 /* Hashtag yoloswag*/

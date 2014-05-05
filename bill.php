@@ -10,6 +10,7 @@
 	
 		<h2>Northside Special</h2>
 		<h3>General tao's chicken with jasmine rice and green beans</h3>
+		<img  class="pic" src="pics/g-tao.jpg" alt="" height="40" width="50">
 		<p>
 			First off the green beans. They weren't too crunchy and they fell more towards the mushy side. Most likely to 
 			have been because it sat around for a while.		
@@ -26,13 +27,16 @@
 		
 		</p>
 		<p>
-		Overall this dish receives 3.5 Rainbows
+		Overall this dish receives 3.5/5 Rainbows
 		</p>
-		
+		<span class = "35">
+
+</span>
 	</article>
 	<article class = 'review'>
 		<h2>Northside Pizza</h2>
 		<h3>Meatlover's Special</h3>
+		<img  class="pic" src="pics/bill-pizza.jpg" alt="" height="40" width="50" >
 		<p>
 			This pizza should have been confiscated by BP because this pizza had an excruciating amount of oil on it.
 		</p>
@@ -45,24 +49,29 @@
 		
 		</p>
 		<p>
-		Overall the oily mess of a pizza gets 2.0 Rainbows
+		Overall the oily mess of a pizza gets 2.0/5 Rainbows
 		</p>
-	
+	<span class = "20">
+
+</span>
 	
 	</article>
 	
 	<article class = 'review'>
 		<h2>Northside Dessert</h2>
 		<h3>Turtle Brownie from Redstone bakery</h3>
+		<img  class="pic" src="pics/bill-brownie.jpg" alt="" height="40" width="50">
 		<p>
 			This thing is really god damn chewy. It doesn't even deserve to be called a brownie. More like chocolate flavoured chewing gum.
 		</p>
 		<p>
-			Still it's a brownie, 3.0 Rainbows
+			Still it's a brownie, 3.0/5 Rainbows
 		</p>
 		
 		
-	
+	<span class = "30">
+
+</span>
 	
 	</article>
 	

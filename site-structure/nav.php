@@ -37,7 +37,7 @@
         }
         
         if ($path_parts['filename'] == "comments") {
-            print '<li class="activePage">LEAVE A CMOMONATN</li>';
+            print '<li class="activePage">Leave a comment</li>';
         }
         else {
             print '<li><a href="comments.php">Comments</a></li>';
