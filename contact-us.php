@@ -131,7 +131,7 @@ if(!$errorMsg){
     // Begin processing data
  $fileExt=".csv";
  
-         $myFileName="formData";
+         $myFileName="data/formData";
  
          $filename = $myFileName . $fileExt;
  
@@ -175,7 +175,7 @@ if(!$errorMsg){
  
 
 
-include_once('mailMessage.php');
+include_once('lib/mailMessage.php');
         $mailed = sendMail($email, $message);
 } // ends form is valid
 } // ends form is submitted
