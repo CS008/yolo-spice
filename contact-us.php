@@ -174,7 +174,7 @@ if(!$errorMsg){
  
 
 
-include_once('mailmessage.php');
+include_once('mailMessage.php');
         $mailed = sendMail($email, $message);
 } // ends form is valid
 } // ends form is submitted
