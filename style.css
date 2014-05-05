@@ -73,6 +73,7 @@ text-align: center;
 
 #remarks{
 border-style: solid double;
+padding: .5em;
 margin-right: 25%;
 margin-left: 10%;
 
@@ -89,6 +90,7 @@ border-style: solid dashed solid dashed;
 background-color: #5ca028;
 padding-left: 3em;
 padding-right: 3em;
+padding-bottom: 2em;
 
 }
 .wrapper{
@@ -96,16 +98,71 @@ background-color:#5ca028;
 
 }
 .pic{
-height:40%;
-width:50%;
+height: 40%;
+width: 50%;
 }
 
-/* Hashtag yoloswag*/
 
-/* MAke it like the UDS website with a waffle and a cherry on top for the banner.
-Orange background
+/* Rainbow scaling */
+ .rainbow{
+border-style: solid;
+border-bottom-width: 0px;
+border-top-width:0px;
+width:100px;
+
+}
+.rainbow00{
 
 
-rainbows for scale
+width: 0px;
+}
+.rainbow05{
 
-*/
+
+width: 10px;
+}
+
+.rainbow10{
+
+width: 20px;
+}
+
+.rainbow15{
+
+width: 30px;
+}
+
+.rainbow20{
+
+width: 40px;
+}
+.rainbow25{
+
+width: 50px;
+}
+
+.rainbow30{
+
+width: 60px;
+}
+
+.rainbow35{
+
+width: 70px;
+}
+
+.rainbow40{
+
+width: 80px;
+}
+
+.rainbow45{
+
+width: 90px;
+}
+
+.rainbow50{
+
+width: 100px;
+}
+
