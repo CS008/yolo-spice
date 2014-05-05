@@ -5,7 +5,7 @@
 	<article class = "review">
 		<h2> Grilled Chicken Sandwich and Fries </h2>
 
-		<img src="pics/chicken-mike.png" height="40" width="50" class="pic">
+		<img src="pics/chicken-mike.png" height="40" width="50" alt="" class="pic">
 
 			<p> Another staple of Cook Dining is the grill. Their hamburgers, grilled cheese, and other classics are a staple of Cook. Plus, every sandwhich can be accompainied by a nice helping of fries. </p>
 
@@ -13,7 +13,7 @@
 
 			<p> I'm here to eat food and review it; and I'm all out of food. So, how did this fare in my opinion? It's potential to be very healthy is high, if you leave out the fries. Plus, it's very tasty. My grade? 4.0/5 Rainbows. </p>
 <div class="rainbow">
-	<img class="rainbow40" src="pics/rainbow.png" alt="" height="14" width="0">		
+	<img class="rainbow40" src="pics/rainbow.png" alt="" height="14" alt="" width="0">		
 	</div>
 			</article>
 
@@ -21,7 +21,7 @@
 
 		<h2> Cheese Pizza </h2>
 
-		<img src="pics/mike-pizza.JPG" height="40" width="50" class="pic">
+		<img src="pics/mike-pizza.JPG" height="40" width="50" alt="" class="pic">
 
 			<p> In the center of Cook Dining, there is a nice station that holds the salad bar, soups, and specialty wrap of the day. All in all, the speicalty wraps are very delicious, rather nutricious, and always a delight. This week, I was lucky enough to try a classic: The Chef's Salad Wrap. </p>
 
