@@ -13,7 +13,7 @@
 
 			<p> I'm here to eat food and review it; and I'm all out of food. So, how did this fare in my opinion? It's potential to be very healthy is high, if you leave out the fries. Plus, it's very tasty. My grade? 4.0/5 Rainbows. </p>
 <div class="rainbow">
-	<img class="rainbow40" src="pics/rainbow.png" alt="" height="14" alt="" width="0">		
+	<img class="rainbow40" src="pics/rainbow.png" alt="" height="14" width="0">		
 	</div>
 			</article>
 
@@ -38,7 +38,7 @@
 		<h2> Cook's Ice Cream  </h2>
 
 
-		<img src="pics/blueicecream2.jpg" height="40" width="50" class="pic">
+		<img src="pics/blueicecream2.jpg" height="40" width="50" alt="" class="pic">
 
 			<p> At Cook, the one desert you cannot go wrong with is the ice cream. With six flavors, it has the most of any unlimited dining location. Their flavors vary from day to day (except Saturday becuase they're closed) and they never dissapoint.  </p>
 
