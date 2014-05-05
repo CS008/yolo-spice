@@ -29,9 +29,9 @@
 		<p>
 		Overall this dish receives 3.5/5 Rainbows
 		</p>
-		<span class = "35">
+		
+<img class="35-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">
 
-</span>
 	</article>
 	<article class = 'review'>
 		<h2>Northside Pizza</h2>
@@ -51,9 +51,9 @@
 		<p>
 		Overall the oily mess of a pizza gets 2.0/5 Rainbows
 		</p>
-	<span class = "20">
+	
 
-</span>
+<img class="20-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">
 	
 	</article>
 	
@@ -69,9 +69,9 @@
 		</p>
 		
 		
-	<span class = "30">
+	
+<img class="30-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">
 
-</span>
 	
 	</article>
 	

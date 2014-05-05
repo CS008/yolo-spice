@@ -19,9 +19,7 @@
 		NO RAINBOWS FOR YOU. 
 		</p>
 
-		<span class = "0">
-
-</span>
+	<img class="0-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">	
 	</article>
 	<article class = review>
 		
@@ -36,9 +34,7 @@
 
       <p> 1.5/5 Rainbows</p>
 
-<span class = "15">
-
-</span>
+<img class="15-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">
 	</article>
 
 <article class = review>
@@ -52,9 +48,7 @@
  <p>
 			Totally solid 4.0/5 Rainbows
 		</p>
-	<span class = "40">
-
-</span>
+	<img class="40-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">
     </article>
 
 <? include("site-structure/footer.php") ?>

@@ -11,9 +11,7 @@
 			<p> The wrap conainted slices of ham, turkey, cheddar cheese, lettuce, tomatoes, and a very light ranch dressing. Combined, it was a very satisfying meal. There is no way you could go wrong with this selection. </p>
 
 			<p> I know why you're all here: The ratings! Well, for this particular dish, I'd rate it as 3.5/5 Rainbows. It was delicious and satisfying, but the wrap wasn't creative. My mindset is that when one visits the specialty wrap station, one must be amazed by how delicious the cobmination is and how exotic it is. </p>
-<span class = "35">
-
-</span>
+<img class="35-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">
 			</article>
 			<article class = review>
 		<h2> Grilled Chicken Sandwich and Fries </h2>
@@ -24,9 +22,7 @@
 
 			<p> I'm here to eat food and review it; and I'm all out of food. So, how did this fare in my opinion? It's potential to be very healthy is high, if you leave out the fries. Plus, it's very tasty. My grade? 4.0/5 Rainbows. </p>
 
-			<span class = "40">
-
-</span>
+	<img class="40-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">		
 			</article>
 			<article class = review>
 		<h2> Cook's Ice Cream  </h2>
@@ -37,9 +33,7 @@
 
 			<p> You can never go wrong with ice cream. 5.0/5 Rainbows for Dinosaur Crunch! </p>
 
-			<span class = "50">
-
-</span>
+	<img class="50-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">		
 	</article>
 
 <? include("site-structure/footer.php") ?>
