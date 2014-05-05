@@ -12,8 +12,9 @@
 			<p> A nice grilled chicken sandwhich on a burger bun with fries is always a decent lunch option. The fries were freshly made and the chicken was topped with a slice of American cheese. How could you go wrong with this selction? Answer: YOU CAN'T. </p>	
 
 			<p> I'm here to eat food and review it; and I'm all out of food. So, how did this fare in my opinion? It's potential to be very healthy is high, if you leave out the fries. Plus, it's very tasty. My grade? 4.0/5 Rainbows. </p>
-
-	<img class="40-rainbow" src="pics/rainbow.png" alt="" height="14" width="0">		
+<div class="rainbow">
+	<img class="rainbow40" src="pics/rainbow.png" alt="" height="14" width="0">		
+	</div>
 			</article>
 
 	<article class="review">
