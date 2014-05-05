@@ -5,7 +5,7 @@ include ("site-structure/header.php");
 
 <article id="cool">
  
-    <img src="pics2/leather.jpg" alt="swag" height="200" width="200">
+    
          
  <form action="<? print $phpSelf; ?>" 
        method="post"
