@@ -5,7 +5,7 @@
 	<article class = "review">
 		<h2> Grilled Chicken Sandwich and Fries </h2>
 
-		<img src="http://4.bp.blogspot.com/-o4Tl6aJwo3Q/T6yJFODgOOI/AAAAAAAAAfk/w1oXVoU1BDU/s1600/gluten+free+chicken+sandwich+with+gluten+free+fries.jpg" height="40" width="50" class="pic">
+		<img src="pics/chicken-mike.png" height="40" width="50" class="pic">
 
 			<p> Another staple of Cook Dining is the grill. Their hamburgers, grilled cheese, and other classics are a staple of Cook. Plus, every sandwhich can be accompainied by a nice helping of fries. </p>
 
@@ -21,7 +21,7 @@
 
 		<h2> Cheese Pizza </h2>
 
-		<img src="http://3.bp.blogspot.com/-khLBBy18WL0/UVy_YJZ4MwI/AAAAAAAAggw/xdSl3g4B-J4/s1600/Sheet+Pan+Pizza+-+Missing+Slice.JPG" height="40" width="50" class="pic">
+		<img src="pics/mike-pizza.JPG" height="40" width="50" class="pic">
 
 			<p> In the center of Cook Dining, there is a nice station that holds the salad bar, soups, and specialty wrap of the day. All in all, the speicalty wraps are very delicious, rather nutricious, and always a delight. This week, I was lucky enough to try a classic: The Chef's Salad Wrap. </p>
 
@@ -38,7 +38,7 @@
 		<h2> Cook's Ice Cream  </h2>
 
 
-		<img src="http://1.bp.blogspot.com/_rJCsXH6KLTk/SmOQAw8YJlI/AAAAAAAAEs4/Uh9h3EDlxhg/s400/blueicecream2.jpg" height="40" width="50" class="pic">
+		<img src="pics/blueicecream2.jpg" height="40" width="50" class="pic">
 
 			<p> At Cook, the one desert you cannot go wrong with is the ice cream. With six flavors, it has the most of any unlimited dining location. Their flavors vary from day to day (except Saturday becuase they're closed) and they never dissapoint.  </p>
 

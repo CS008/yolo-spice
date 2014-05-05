@@ -9,6 +9,40 @@ body{
 	margin-right: 25%;
 }
 
+header h1 {
+    padding: 0.8em 5.33333333%;  /* 48px / 900px */
+    color: white;
+    font-size: 20pt;
+}
+
+header img{
+    float:left;
+    margin: -10px -10px 10px;
+    width: 100px;
+}
+
+header{
+    clear: both;
+    background-color: #398114;
+    border-radius: 015px 015px 0px 0px;
+}
+
+footer{
+    clear: both;
+    background-color: #398114;
+    color: white;
+    text-align: right;
+    border-bottom-left-radius:015px;
+    border-bottom-right-radius:015px;
+    padding: 0.8em 5.33333333%;  /* 48px / 900px */
+    margin-top: 1em;
+    
+}
+
+footer a{
+    color: white;
+}
+
 /**                                                                                             **/
 /**                                 Naviagtion Section                                          **/
 /**                                                                                             **/
