@@ -1,3 +1,4 @@
+
 <?php 
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 //
@@ -23,7 +24,10 @@ function sendMail($to, $message){
     
     // just checking to make sure the values passed in are reasonable
     if(empty($to)) return false;
-    if(!filter_var($to, FILTER_VALIDATE_EMAIL)) return false;
+
+if(!filter_var($to, FILTER_VALIDATE_EMAIL)) return false;
+
+
     
     if(empty($message)) return false;
     if (strlen($message)<$MIN_MESSAGE_LENGTH) return false;
@@ -37,13 +41,13 @@ function sendMail($to, $message){
     $todaysDate=strftime("%x");
 
     /* subject line for the email message */
-    $subject = "Web Order: " . $todaysDate ;
+    $subject = "Questions, Comments, Concerns" . $todaysDate ;
 
     // be sure to change Your Site and yoursite to something meaningful
-    $mailFrom = "noreply@uvm.edu";
+    $mailFrom = "foodswag@uvm.edu";
 
-    $cc = "";  // ex: $cc = "webmaster@yoursite.com";
-    $bcc = "mdfritz@uvm.edu"; // ex: $bcc = "kgervais@yoursite.com";
+    $cc = "rerickso@uvm.edu";  // ex: $cc = "webmaster@yoursite.com";
+    $bcc = "mgordon9@uvm.edu"; // ex: $bcc = "apascual@yoursite.com";
 
     /* message */
     $messageTop  = '<html><head><title>' . $subject . '</title></head><body>';
